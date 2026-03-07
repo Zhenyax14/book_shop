@@ -98,17 +98,17 @@ Campos principales:
 
 
 
-# 🧱 Project Architecture
+# 🧱 Arquitectura del Proyecto
 
-The project follows a modern architecture based on:
+El proyecto sigue una arquitectura moderna basada en:
 
 - **Backend API:** Laravel
-- **Public Frontend:** Server Side Rendering (SSR)
-- **Administration Panel:** Client Side Rendering (CSR) with Vue.js
-- **Database:** PostgreSQL
-- **Containers:** Docker
+- **Frontend público:** Server Side Rendering (SSR)
+- **Panel de administración:** Client Side Rendering (CSR) con Vue.js
+- **Base de datos:** PostgreSQL
+- **Contenedores:** Docker
 
-Simplified structure:
+Estructura simplificada:
 ```bash
 bookshop/
 │
@@ -118,48 +118,48 @@ bookshop/
 ├── docs
 └── README.md
 ```
---- 
-## ⚙️ Rendering Strategy
 
-The platform uses a **hybrid rendering architecture** to optimize SEO, performance, and interactivity.
+---
+## ⚙️ Estrategia de Renderizado
+
+La plataforma utiliza una **arquitectura híbrida de renderizado** para optimizar SEO, rendimiento e interactividad.
 
 ### Server Side Rendering (SSR)
 
-Used in the public-facing part of the platform:
+Utilizado en la parte pública de la plataforma:
 
-- Book catalog
-- Detail pages
+- Catálogo de libros
+- Páginas de detalle
 - Landing pages
-- Indexable content
+- Contenido indexable
 
-Advantages:
+Ventajas:
 
-- Better SEO
-- Faster initial rendering
-- Improved search engine indexing
+- Mejor SEO
+- Renderizado inicial más rápido
+- Mejor indexación por motores de búsqueda
 
 ### Client Side Rendering (CSR)
 
-Used in:
+Utilizado en:
 
-- Administration panel
-- Interactive book reader
+- Panel de administración
+- Lector interactivo de libros
 
-Examples:
+Ejemplos:
 
-- Book management (CRUD)
-- Catalog management
-- System administration
+- Gestión de libros (CRUD)
+- Gestión del catálogo
+- Administración del sistema
 
-Advantages:
+Ventajas:
 
-- SPA-like application experience
-- Faster interactions
-- Less page reloads
-- SEO optimization is not critical
----
+- Experiencia de aplicación tipo SPA
+- Interacciones más rápidas
+- Menor recarga de página
+- No requiere optimización SEO intensiva
 
-# 🛠 Technologies Used
+# 🛠 Tecnologías Utilizadas
 
 ## Backend
 
@@ -175,19 +175,19 @@ Advantages:
 
 - Vue.js 3
 - Inertia.js
-- Server Side Rendering (SSR) (Public-facing part)
-- Client Side Rendering (CSR) (Admin panel, interactive book reader)
+- Server Side Rendering (SSR) (Parte pública)
+- Client Side Rendering (CSR)  (Panel de admin, lector de libros)
 - Vite
 - HTML5
 - CSS3
-- Bootstrap & SCSS
+- Bootstrap y SCSS
 
-## Payments
+## Pagos
 
 - Stripe
 - Stripe Webhooks
 
-## Infrastructure
+## Infraestructura
 
 - Docker
 - Docker Compose
@@ -198,56 +198,60 @@ Advantages:
 
 - Google Search Console
 - Google Analytics
-- HTML Optimization
+- Optimización de HTML
 
-## Hosting
+## Alojamiento
 
-The project is deployed at:
+El proyecto está desplegado en:
 
 https://booksplanet.store
 
-Infrastructure:
+Infraestructura:
 
-- Linux VPS
+- VPS Linux
 - Docker
 - Nginx
 - PostgreSQL
 
-# 📋 Technical Requirements
+---
 
-To run the project, you need:
+# 📋 Requisitos Técnicos
+
+Para ejecutar el proyecto necesitas:
 
 - Docker
 - Docker Compose
 - Git
 
-Optional (if running without Docker):
+Opcional (si se ejecuta sin Docker):
 
 - PHP 8.2+
 - Composer
 - Node.js 18+
-- npm or pnpm
+- npm o pnpm
 - PostgreSQL
 
-# 🐳 Docker Installation
+---
 
-## 1. Clone the repository
+# 🐳 Instalación con Docker
+
+## 1. Clonar el repositorio
 
 ```bash
 git clone https://github.com/zhenyax14/book_shop.git
 cd book_shop
 ```
 
-## 2. Copy the environment file
-Copy the default variables:
+## 2. Copiar el archivo de entorno
+Copiar las variables de entorno por defecto:
 ```bash
     cp .env.example .env
 ```
-Edit it:
+Editar:
 ```bash
     nano .env
 ```
-Enter your  DEV or PROD credentials:
+Introducir las credenciales DEV o PROD:
 ```
     DB_DATABASE=bookshop
     DB_USERNAME=root
@@ -257,31 +261,32 @@ Enter your  DEV or PROD credentials:
     STRIPE_SECRET=your_secret
 ```
 
-## 3. Start the containers
+## 3. Levantar los contenedores
 ```bash
   docker compose up -d
 ```
-## 4. Install the dependencies
+## 4. Instalar dependencias
 ```bash
     docker compose exec app composer install
     docker compose exec app npm install
     docker compose exec app npm run dev
 ```
 
-## 5. Generate application key
+## 5. Generar clave de aplicación
 ```bash
     docker compose exec app php artisan key:generate
 ```
 
-## 6. Run migrations
+## 6. Ejecutar migraciones
 ```bash
     docker compose exec app php artisan migrate
 ```
-# 📊 Data Model
 
-![E-R Diagram](docs/img/ER/er-diagram.png)
+# 📊 Modelo de Datos
 
-Main system entities:
+![Diagrama E-R](docs/img/ER/er-diagram.png)
+
+Principales entidades del sistema:
 
 ### Users
 
@@ -307,9 +312,9 @@ Main system entities:
 - edition
 - pages_count
 - cover_path
-- access_type (e.g. subscription, individual, etc)
+- access_type (ej. subsciption, individual, etc)
 - price
-- status (e.g. draft, published, etc)
+- status (ej draft, published, etc)
 - published_at
 - timestamps
 - softDeletes
@@ -323,10 +328,12 @@ Main system entities:
 - created_at
 - updated_at
 
-### Book Tags (Pivot Table)
+
+### Book Tags (Tabla pivote)
 
 - book_id
 - tag_id
+
 
 ### Book Volumes
 
@@ -347,6 +354,7 @@ Main system entities:
 - reading_time_minutes
 - is_published
 - timestamps
+
 
 ### Book Pages
 
@@ -444,50 +452,53 @@ Main system entities:
 - words_per_page
 - timestamps
 
-# 🔐 Security
+# 🔐 Seguridad
 
 ## Back-End
 
-- CSRF protection
-- Validation using FormRequest
-- Laravel Sanctum for APIs
-- Role-based route protection
+- Protección CSRF
+- Validación con FormRequest
+- Laravel Sanctum para APIs
+- Rutas protegidas según rol
 
 ## Front-End
 
-- Live form validation
-- Communication with Back-End via token
+- Validación de los formularios en vivo
+- Comunicación con Back-End mediante token
 
-## Deployment
+## Despliegue
 
-- Basic VPS server hardening (ufw, strong passwords, ssh)
-- Correct folder permissions according to structure
+- Securización básica del servidor VPS (ufw, contraseña segura, ssh)
+- Permisos de las carpetas correctas según la estructura
 
-# 📖 Project Roadmap
+# 📖 Roadmap del Proyecto
 
-Possible future improvements:
+Posibles mejoras futuras:
 
-- Book review system
-- Favorites / wishlist
-- Book recommendations
-- Admin metrics dashboard
-- AI assistant
+    Sistema de reseñas de libros
+
+    Favoritos / lista de deseos
+
+    Recomendaciones de libros
+
+    Panel de métricas para el administrador
+
+    Asistente IA
 
 # 🧪 Testing
 
-Will be implemented:
+Se implementarán:
 
-- Unit tests with PHPUnit
-- API integration tests
-- Simulated payment tests with Stripe
+- Tests unitarios con PHPUnit
+- Tests de integración para API
+- Tests de pagos simulados con Stripe
 
-# 📄 License
+# 📄 Licencia
 
-Este proyecto es software privativo.
-Todos los derechos reservados. Ninguna parte de este software puede ser copiada, modificada,
-distribuida o utilizada sin permiso expreso del autor.
+Este proyecto es software propietario.
+Todos los derechos reservados. Ninguna parte de este software puede ser copiada, modificada, distribuida o utilizada sin el permiso expreso por escrito del autor.
 
-# 📖 Additional Documentation
+# 📖 Documentación adicional
 
 [Stripe](https://docs.stripe.com/ )
 
