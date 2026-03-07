@@ -595,11 +595,13 @@ API integration tests
 
 Simulated payment tests with Stripe
 
-📄 License
+# 📄 License
 
-This project is distributed under the CC BY-NC license.
+This project is proprietary software.
+All rights reserved. No part of this software may be copied, modified,
+distributed, or used without express written permission from the author.
 
-📖 Additional Documentation
+# 📖 Additional Documentation
 
 Stripe
 https://docs.stripe.com/

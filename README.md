@@ -483,7 +483,9 @@ Will be implemented:
 
 # 📄 License
 
-This project is distributed under the CC BY-NC license.
+Este proyecto es software privativo.
+Todos los derechos reservados. Ninguna parte de este software puede ser copiada, modificada,
+distribuida o utilizada sin permiso expreso del autor.
 
 # 📖 Additional Documentation
 
