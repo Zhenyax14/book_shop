@@ -262,7 +262,7 @@ Add your DEV or PROD credentials:
 
 # 📊 Data Model
 
-![E-R Diagram](docs/img/ER/er-diagram.png)
+![E-R Diagram](./docs/img/ER/er-diagram.png)
 
 Main system entities:
 

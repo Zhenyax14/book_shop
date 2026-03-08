@@ -284,7 +284,7 @@ Introducir las credenciales DEV o PROD:
 
 # 📊 Modelo de Datos
 
-![Diagrama E-R](docs/img/ER/er-diagram.png)
+![Diagrama E-R](./docs/img/ER/er-diagram.png)
 
 Principales entidades del sistema:
 
