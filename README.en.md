@@ -102,6 +102,7 @@ bookshop/
 ├── book-store-docker
 ├── docs
 └── README.md
+````
 ## ⚙️ Rendering Strategy
 
 The platform uses a **hybrid rendering architecture** to optimize SEO, performance, and interactivity.
