@@ -425,7 +425,10 @@ Main system entities:
 - page_width
 - pagination_mode
 - words_per_page
-- timestamps 
+- timestamps
+
+![UML Diagram](./docs/img/ER/e-diagram.png)
+
 
 # 🔐 Security
 

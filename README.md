@@ -452,6 +452,9 @@ Principales entidades del sistema:
 - words_per_page
 - timestamps
 
+![UML Diagram](./docs/img/ER/e-diagram.png)
+
+
 # 🔐 Seguridad
 
 ## Back-End
