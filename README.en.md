@@ -78,6 +78,9 @@ Main fields:
 - timestamps
 - softDeletes
 ---
+### Use Case Diagram
+
+![Diagrama use-case](./docs/img/use-case/use-case.png)
 
 ## 🏗 System Architecture
 ## 🧱 Project Architecture

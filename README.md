@@ -94,6 +94,12 @@ Campos principales:
 - softDeletes
 ---
 
+### Diagrama Use Case
+
+![Diagrama use-case](./docs/img/use-case/use-case.png)
+
+
+
 ## 🏗 Arquitectura del Sistema
 
 
