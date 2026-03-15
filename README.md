@@ -179,6 +179,9 @@ Ventajas:
 
 ## Frontend
 
+
+👉 **[Ver prototipo interactivo](https://zhenyax14.github.io/book_shop/design/concept-art.html)**
+
 - Vue.js 3
 - Inertia.js
 - Server Side Rendering (SSR) (Parte pública)
